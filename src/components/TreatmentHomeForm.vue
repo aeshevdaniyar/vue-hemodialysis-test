@@ -21,7 +21,7 @@ const onSubmit = () => {
     <a-typography-title :level="2">Лечение на дому</a-typography-title>
     <a-form @submit.prevent="onSubmit" layout="vertical">
         <MedicationsSelect :value="medications?.value" :onSelect="setMedications" />
-        <a-flex>
+        <a-flex wrap="wrap">
             <PathReceptionSelect :value="pathOfReception" :onSelect="setPathOfReception" />
             <DrugsSelect :drugsValue="drugsValue" :onSelect="setDrugsUnit" :selectValue="drugsUnit"
                 :setDrugsValue="setDrugsValue" />
